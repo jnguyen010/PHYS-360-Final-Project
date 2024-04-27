@@ -44,3 +44,16 @@ Questions that will be answered for this project
 
 [The motion of an arbitrarily rotating spherical projectile and its application to ball games](https://iopscience.iop.org/article/10.1088/0031-8949/88/01/018101/meta)
 
+[A tale of two problem solvers (Average cube shadows)](https://www.youtube.com/watch?app=desktop&v=ltLUadnCyi0)
+
+[The Drag Equation](https://www.grc.nasa.gov/www/k-12/VirtualAero/BottleRocket/airplane/drageq.html#:~:text=The%20drag%20equation%20states%20that,times%20the%20reference%20area%20A)
+
+[Theory and Practice of the Hydrodynamic Redesign of Artificial Hellbender Habitat](https://www.researchgate.net/figure/Drag-coefficients-for-different-shapes-and-dimensions-based-on-Prasuhn-1980_fig6_317690978)
+
+[Aerodynamic Drag Characteristics and Shape Design of a Radar Antenna Used for Airport Ground Traffic Control](https://www.researchgate.net/figure/A-summary-of-measured-drag-coefficients-for-Re-10-000-for-a-circular-cylinder-and_fig12_238065804)
+
+
+
+
+
+
