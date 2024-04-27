@@ -82,7 +82,7 @@ def Projectile_Motion(init):
 
     return(t[:step], r[:,:step], v[:,:step], F[:,:step], A[:,:step], Cd[:,:step])
 ```
-This will return the time, position, velocity, force, area, and coefficient of drag. I am still trying to figure out how to find the area and coefficient of drag at each point, so this part will be the main challenge in this project. Afterwards, we can plot each of the returns as a function of time and see how the rotating object and non-rotating object differ. 
+This will return the time, position, velocity, force, area, and coefficient of drag. I am still trying to figure out how to find the area and coefficient of drag at each point, so this part will be the main challenge in this project. First, we'll simplify the problem in only one dimensions to first test whether our code works. Then, once we have confirmed, we can add another dimension in the x-direction. Afterwards, we can plot each of the returns as a function of time and see how the rotating object and non-rotating object differ. 
 
 
 
