@@ -27,19 +27,63 @@ For the rotating object, we need to look into the equation for just the drag for
 $$\vec{F}_{D} =  \frac{1}{2} \rho C_d A |v_i| \vec{v_i}$$
 
 
-Once we can find the reference are and coefficient of drag at each point, we can set the initial conditions for our set up. 
+Once we can find the reference area and coefficient of drag at each point, we can set the initial conditions for our set up. 
 ```python
 import numpy as np
+import matplotlib.pyplot as plt
 
 init = {"g":   np.array([0,-9.81,0]),
         "r0":  np.array([0,5000,0]),
         "v0":  np.array([10,10,0]),
-        "R":   5,                       # radius = 5cm
-        "m":   1,                       # mass = 1kg
-        "rho": 1.3,                     # density of air kg/m^3
-        "Dt":  0.01,                    # in seconds, 0.01s
-        "N":   10000                    # iterations (total time = 100s)
+        "R":   5,                                               # radius = 5cm
+        "A0":   np.array([np.pi * (R * 10**(-2))**2,0,0]),      # radius = 5cm
+        "Cd0":   np.array([0.5,0,0]),                           # radius = 5cm
+        "m":   1,                                               # mass = 1kg
+        "rho": 1.3,                                             # density of air kg/m^3
+        "Dt":  0.01,                                            # in seconds, 0.01s
+        "N":   10000                                            # iterations (total time = 100s)
 ```
+
+Then, we can define our function for projectile motion.
+```python
+def Projectile_Motion(init):
+
+    N = init["N"]
+    t = np.linspace(0,init["Dt"] * N, N)
+    r = np.zeros((3, N))
+    v = np.zeros((3, N))
+    F = np.zeros((3, N))
+    A = np.zeros((3, N))
+    Cd = np.zeros((3, N))
+
+    # Initial Conditions
+    Dt = init["Dt"]
+    step = 0
+    r[:,step] = init["r0"]
+    v[:,step] = init["v0"]
+    v_abs = np.linalg.norm(v[:,step])
+    A[:,step] = init["A0"]
+    Cd[:,step] = init["Cd0"]    
+    F[:,step] = init["m"] * init["g"] - 0.5*init["rho"] * Cd[:,step] * A[:,step]  * v_abs * v[:,step]
+
+    # ====================================
+
+    for step in np.arange(1,N):
+        v_abs = np.linalg.norm(v[:,step-1])
+        F[:,step] = init["m"] * init["g"] - 0.5*init["rho"] * Cd[:,step] * A[:,step]  * v_abs * v[:,step-1]
+        v[:, step] = v[:, step-1] + F[:, step] / init["m"] * Dt
+        r[:, step] = r[:, step-1] + v[:, step] * Dt
+        # Add equation for calculating area
+        # Add equation for determining coefficient of drag
+
+        if r[1, step] < 0:
+            break
+    nLen = step
+
+    return(t[:step], r[:,:step], v[:,:step], F[:,:step], A[:,:step], Cd[:,:step])
+```
+This will return the time, position, velocity, force, area, and coefficient of drag. I am still trying to figure out how to find the area and coefficient of drag at each point, so this part will be the main challenge in this project. Afterwards, we can plot each of the returns as a function of time and see how the rotating object and non-rotating object differ. 
+
 
 
 [//]: # (explain your computation and why)
