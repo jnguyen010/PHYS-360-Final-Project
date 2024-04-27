@@ -14,7 +14,21 @@ By adding rotation to non-spherical object, the affects of air friction on the o
 
 
 ## Results
-explain your computation and why
+For the code, we will be using Newton's equations to determine the force, velocity, and position of the object at a certain point. 
+
+$$\vec{F}_{f} = m\vec{g} - \frac{1}{2} \rho C_d A |v_i| \vec{v_i}$$
+
+$$\vec{v}_f = \vec{v}_i + \frac{\vec{F}_f} {m} \Delta t $$
+
+$$\vec{r}_f = \vec{r}_i + \vec{v}_f \Delta t $$
+
+
+However, for the rotating object, we need to look into the equation for just the drag force. 
+
+$$\vec{F}_{D} =  \frac{1}{2} \rho C_d A |v_i| \vec{v_i}$$
+
+
+[//]: # (explain your computation and why)
 
 
 ## Questions
