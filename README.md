@@ -1,7 +1,7 @@
 # Projectile Motion of a Rotating Object
 
 
-## Summary ooooooooopppppppppp
+## Summary
 How would the ration of an object affect its trajectory as it is thrown off a tall building? To answer this question, we will explore how the drag force of an object changes as the reference area changes due to the rotation about a certain axis. We will then determine the trajectory of the object with and without the rotation and compare how they differ in terms of the path taken, where the object lands on the gorund, and the time it takes for the object to complete its journey. 
 
 
