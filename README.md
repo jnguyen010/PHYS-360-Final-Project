@@ -10,7 +10,7 @@ In classical mechanics, one of the first problems we are taught is projectile mo
 
 By adding rotation to non-spherical object, the affects of air friction on the object will vary, because the drag force depends on both the reference area and coefficient drag. The reference area of the object will differ at various times of the path. We will need to use a computational approach to calculate the drag force on the object at each moment, which we can then use to calculate the total force on the object. 
 
-# explain what is known in this field and why it requires a computational approach
+[//]: # explain what is known in this field and why it requires a computational approach
 
 
 ## Results
