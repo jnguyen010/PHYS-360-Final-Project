@@ -22,17 +22,35 @@ $$\vec{v}_f = \vec{v}_i + \frac{\vec{F}_f} {m} \Delta t $$
 
 $$\vec{r}_f = \vec{r}_i + \vec{v}_f \Delta t $$
 
-
 For the rotating object, we need to look into the equation for just the drag force. More specifically, how the area and coefficient of drag will be changing. To do this, we have to find a way to relate the reference area to the angle of the normal vector of the object with the velocity. 
 
 $$\vec{F}_{D} =  \frac{1}{2} \rho C_d A |v_i| \vec{v_i}$$
+
+
+Once we can find the reference are and coefficient of drag at each point, we can set the initial conditions for our set up. 
+```python
+import numpy as np
+
+init = {"g":   np.array([0,-9.81,0]),
+        "r0":  np.array([0,5000,0]),
+        "v0":  np.array([10,10,0]),
+        "R":   5,                       # radius = 5cm
+        "m":   1,                       # mass = 1kg
+        "rho": 1.3,                     # density of air kg/m^3
+        "Dt":  0.01,                    # in seconds, 0.01s
+        "N":   10000                    # iterations (total time = 100s)
+```
 
 
 [//]: # (explain your computation and why)
 
 
 ## Questions
-Questions that will be answered for this project
+1. Does the rotation of an object have any affects on the time it takes for an object to reach the ground?
+2. Will a rotating object reach terminal velocity faster than a non-rotating object?
+3. How does the drag force of differently shaped objects compare to each other?
+
+[//]: # (Questions that will be answered for this project)
 
 
 
