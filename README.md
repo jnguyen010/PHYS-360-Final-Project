@@ -23,7 +23,7 @@ $$\vec{v}_f = \vec{v}_i + \frac{\vec{F}_f} {m} \Delta t $$
 $$\vec{r}_f = \vec{r}_i + \vec{v}_f \Delta t $$
 
 
-However, for the rotating object, we need to look into the equation for just the drag force. 
+However, for the rotating object, we need to look into the equation for just the drag force. More specifically, how the area and coefficient of drag will be changing. 
 
 $$\vec{F}_{D} =  \frac{1}{2} \rho C_d A |v_i| \vec{v_i}$$
 
@@ -33,4 +33,14 @@ $$\vec{F}_{D} =  \frac{1}{2} \rho C_d A |v_i| \vec{v_i}$$
 
 ## Questions
 Questions that will be answered for this project
+
+
+
+## Resources
+
+[Projectile motion of a once rotating object: physical quantities at the point of return](https://www.webofscience.com/wos/woscc/full-record/WOS:000381819000009)
+
+https://link.springer.com/article/10.1134/S1029959922020035
+
+https://iopscience.iop.org/article/10.1088/0031-8949/88/01/018101/meta
 
