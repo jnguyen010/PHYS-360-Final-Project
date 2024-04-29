@@ -37,7 +37,7 @@ init = {"g":   np.array([0,-9.81,0]),
         "v0":  np.array([10,10,0]),
         "R":   5,                                               # radius = 5cm
         "A0":   np.array([np.pi * (R * 10**(-2))**2,0,0]),      # radius = 5cm
-        "Cd0":   np.array([0.5,0,0]),                           # radius = 5cm
+        "Cd0":   np.array([1.2,0,0]),                           # radius = 5cm
         "m":   1,                                               # mass = 1kg
         "rho": 1.3,                                             # density of air kg/m^3
         "Dt":  0.01,                                            # in seconds, 0.01s
@@ -46,7 +46,7 @@ init = {"g":   np.array([0,-9.81,0]),
 
 Then, we can define our function for projectile motion.
 ```python
-def Projectile_Motion(init):
+def Projectile_Motion_Rotating(init):
 
     N = init["N"]
     t = np.linspace(0,init["Dt"] * N, N)
