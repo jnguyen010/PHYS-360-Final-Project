@@ -93,6 +93,7 @@ This will return the time, position, velocity, force, area, and coefficient of d
 1. Does the rotation of an object have any affects on the time it takes for an object to reach the ground?
 2. Will a rotating object reach terminal velocity faster than a non-rotating object?
 3. How does the drag force of differently shaped objects compare to each other?
+4. How does varying the mass affect the trajectory and time of the object?
 
 [//]: # (Questions that will be answered for this project)
 
